@@ -46,33 +46,28 @@
 // --------------------------------- //
 
 
-
-
 // START OF JAVASCRIPT //
 
-// a) Make an array with the answers
+// Doc-ID Variables for HTML
+var wins = document.getElementById("wins");
+var letterSlot = document.getElementById("letterSlot");
+var letterReveal = document.getElementById("letterReveal");
+var letterGuessed = document.getElementById("letterGuessed");
+var guessesLeft = document.getElementById("guessesLeft");
 
-var possibleAnswers = ["texas", "trio", "airplane", "hiphop", "international"]
-console.log(possibleAnswers[1])
-
-// why didnt this work? //
-var texas = ["t", "e", "x", "a", "s"]
-
-// b) Randomly (or maybe not so randomly) Pick Question
-
-// Randomly chooses a choice from the options array. This is the Computer's guess.
+// Array of possible answers + Random Answer Generator
+var possibleAnswers = ["texas", "trio", "airplane", "hiphop", "international"];
 var answerPrompt = possibleAnswers[Math.floor(Math.random() * possibleAnswers.length)];
-console.log(answerPrompt)
 
+// Run function to set up a prompt
 
-// c) User Presses Letter
 
 // This function is run whenever the user presses a key.
 document.onkeyup = function (event) {
 
-// Determines which key was pressed.
-var userGuess = event.key;
-console.log(userGuess)
+    // Determines which key was pressed.
+    var userGuess = event.key;
+    console.log(userGuess)
 }
 
 
@@ -80,8 +75,9 @@ console.log(userGuess)
 
 // d1) If letter is true --> replace according blank space with letter
 
-if (answerPrompt === possibleAnswers[3]) {
-    console.log ("Yeah!");
+//checking to see if "if" statement works
+if (answerPrompt === possibleAnswers[2]) {
+    console.log("Khruangbin!");
 }
 
 
