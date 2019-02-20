@@ -12,4 +12,8 @@ To get started, open it up and read those instruct-o's!
 
 If at anypoint you need help please contact us by googling Khraungbin and listening to their music, at which point you'll realize the answers you sought were inside you all along.
 
+![The Gang?](assets/images/Tour_Cartoon.jpg
 
+
+        
+      
