@@ -14,34 +14,34 @@
 // Psuedo-Code:
 
 // 1) Set-Up Screen:
-    // a) Title - CSS
-    // b) Instructions - HTML / CSS
-    // c) Wins - JVS
-    // d) Blank Letter Slots - JVS
-    // e) Revealed Letters - JVS
-    // f) Guesses Left - JVS
-    // g) Letters Guessed - JVS
-    // h) Question - HTML / CSS (Note - Maybe nix this part - just have a word and then maybe an explination. EG: "Guitar" and then it's like "yeah, they have a guitarist!"
+// a) Title - CSS
+// b) Instructions - HTML / CSS
+// c) Wins - JVS
+// d) Blank Letter Slots - JVS
+// e) Revealed Letters - JVS
+// f) Guesses Left - JVS
+// g) Letters Guessed - JVS
+// h) Question - HTML / CSS (Note - Maybe nix this part - just have a word and then maybe an explination. EG: "Guitar" and then it's like "yeah, they have a guitarist!"
 
-// 2) Game Function
-    // a) Set up list of questions and answers
-    // ---> Make an array with the answers
-    // b) Randomly (or maybe not so randomly) Pick Question
-    // c) User Presses Letter
-    // d) Letter is either True or False (matches or doesn't):
-    // d1) If letter is true --> replace according blank space with letter
-    // d2) Else put letter on the guessed board and tick down a guess
-    // e) If all letters are filled display win message and restart loop with a different question
-    // f) If all guesses run out display lose message and restart loop with same (?) question
+// 2) Game Function:
+// a) Set up list of questions and answers
+// ---> Make an array with the answers
+// b) Randomly (or maybe not so randomly) Pick Question
+// c) User Presses Letter
+// d) Letter is either True or False (matches or doesn't):
+// d1) If letter is true --> replace according blank space with letter
+// d2) Else put letter on the guessed board and tick down a guess
+// e) If all letters are filled display win message and restart loop with a different question
+// f) If all guesses run out display lose message and restart loop with same (?) question
 
 // --------------------------------- //
 
 // Questions & Answers:
-    // 1) Texas ("yeah, they're from houston!")
-    // 2) Trio ("that's right, they're a three-piece - drums, bass & guitar!"")
-    // 3) Airplane ("you got it, 'khraungbin' is a thai translation for 'air plane!'"")
-    // 4) Hip-hop ("oh yeah, DJ the drummer is a hip-hop producer so their songs definitely have a hip-hop backbeat!")
-    // 5) International ("yeah yeah, our heroes take influence ansd stlye from all over the world, giving their music a distinct fusion quality!")
+// 1) Texas ("yeah, they're from houston!")
+// 2) Trio ("that's right, they're a three-piece - drums, bass & guitar!"")
+// 3) Airplane ("you got it, 'khraungbin' is a thai translation for 'air plane!'"")
+// 4) Hip-hop ("oh yeah, DJ the drummer is a hip-hop producer so their songs definitely have a hip-hop backbeat!")
+// 5) International ("yeah yeah, our heroes take influence ansd stlye from all over the world, giving their music a distinct fusion quality!")
 
 // --------------------------------- //
 
@@ -53,9 +53,10 @@
 // a) Make an array with the answers
 
 var possibleAnswers = ["texas", "trio", "airplane", "hiphop", "international"]
-console.log(possibleAnswers[0])
+console.log(possibleAnswers[1])
 
-
+// why didnt this work? //
+var texas = ["t", "e", "x", "a", "s"]
 
 // b) Randomly (or maybe not so randomly) Pick Question
 
@@ -66,11 +67,27 @@ console.log(answerPrompt)
 
 // c) User Presses Letter
 
+// This function is run whenever the user presses a key.
+document.onkeyup = function (event) {
+
+// Determines which key was pressed.
+var userGuess = event.key;
+console.log(userGuess)
+}
 
 
 // d) Letter is either True or False (matches or doesn't):
-    // d1) If letter is true --> replace according blank space with letter
-    // d2) Else put letter on the guessed board and tick down a guess
+
+// d1) If letter is true --> replace according blank space with letter
+
+if (answerPrompt === possibleAnswers[3]) {
+    console.log ("Yeah!");
+}
+
+
+
+
+// d2) Else put letter on the guessed board and tick down a guess
 
 
 
