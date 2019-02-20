@@ -20,12 +20,12 @@
     // 1) Set-Up Screen:
         // a) Title - CSS
         // b) Instructions - HTML / CSS
-        // c) Question - HTML / CSS
-        // d) Wins - JVS
-        // e) Blank Letter Slots - JVS
-        // f) Revealed Letters - JVS
-        // g) Guesses Left - JVS
-        // h) Letters Guessed - JVS
+        // c) Wins - JVS
+        // d) Blank Letter Slots - JVS
+        // e) Revealed Letters - JVS
+        // f) Guesses Left - JVS
+        // g) Letters Guessed - JVS
+        // h) Question - HTML / CSS
     // 2) Game Function
         // a) Set up list of questions and answers
         // b) Randomly (or maybe not so randomly) Pick Question
