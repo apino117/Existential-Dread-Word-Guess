@@ -48,21 +48,52 @@
 
 // START OF JAVASCRIPT //
 
-// Doc-ID Variables for HTML
+// Doc-ID Variables for HTML //
 var wins = document.getElementById("wins");
 var letterSlot = document.getElementById("letterSlot");
 var letterReveal = document.getElementById("letterReveal");
 var letterGuessed = document.getElementById("letterGuessed");
 var guessesLeft = document.getElementById("guessesLeft");
 
-// Array of possible answers + Random Answer Generator
-var possibleAnswers = ["texas", "trio", "airplane", "hiphop", "international"];
-var answerPrompt = possibleAnswers[Math.floor(Math.random() * possibleAnswers.length)];
+// General Variables //
 
-// Run function to set up a prompt
+var letters = ["0", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+
+// Testing Words in Console Log //
+//Texas//
+console.log((letters[20]) + (letters[5]) + (letters[24]) + (letters[1]) + (letters[19]));
+//Trio//
+console.log((letters[20]) + (letters[18]) + (letters[9]) + (letters[15]));
+//Airplane//
+console.log((letters[1]) + (letters[9]) + (letters[18]) + (letters[16]) + (letters[12]) + (letters[1]) + (letters[14]) + (letters[5]));
+//HipHop//
+console.log((letters[8]) + (letters[9]) + (letters[16]) + (letters[8]) + (letters[15]) + (letters[16]));
+//International//
+console.log((letters[9]) + (letters[14]) + (letters[20]) + (letters[5]) + (letters[18]) + (letters[14]) + (letters[1]) + (letters[20]) + (letters[9]) + (letters[15]) + (letters[14]) + (letters[1]) + (letters[12]));
 
 
-// This function is run whenever the user presses a key.
+document.onkeyup = function (event) {
+    var userGuess = event.key;
+    console.log(userGuess)
+};
+
+// Possible Answers //
+
+var texas = [(letters[20]) + (letters[5]) + (letters[24]) + (letters[1]) + (letters[19])];
+var trio = [(letters[20]) + (letters[18]) + (letters[9]) + (letters[15])];
+var airplane = [(letters[1]) + (letters[9]) + (letters[18]) + (letters[16]) + (letters[12]) + (letters[1]) + (letters[14]) + (letters[5])];
+var hiphop = [(letters[8]) + (letters[9]) + (letters[16]) + (letters[8]) + (letters[15]) + (letters[16])]
+var international = [(letters[9]) + (letters[14]) + (letters[20]) + (letters[5]) + (letters[18]) + (letters[14]) + (letters[1]) + (letters[20]) + (letters[9]) + (letters[15]) + (letters[14]) + (letters[1]) + (letters[12])]
+
+// Array of possible answers + Random Answer Generator //
+
+var possibleAnswer = [texas, trio, airplane, hiphop, international];
+var answerPrompt = possibleAnswer[Math.floor(Math.random() * possibleAnswer.length)];
+
+// Run function to set up a prompt //
+
+
+// This function is run whenever the user presses a key. 
 document.onkeyup = function (event) {
 
     // Determines which key was pressed.
@@ -76,7 +107,7 @@ document.onkeyup = function (event) {
 // d1) If letter is true --> replace according blank space with letter
 
 //checking to see if "if" statement works
-if (answerPrompt === possibleAnswers[2]) {
+if (answerPrompt === possibleAnswer[2]) {
     console.log("Khruangbin!");
 }
 
