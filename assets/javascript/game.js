@@ -76,7 +76,7 @@ var blankTexas = ["0", "0", "0", "0", "0"];
 var blankTrio = ["0", "0", "0", "0"];
 var blankAirplane = ["0", "0", "0", "0", "0", "0", "0", "0"];
 var blankHiphop = ["0", "0", "0", "0", "0", "0"];
-var blankInternational = ["0", "0", "0", "0", "0", "0", "0", "0", "0", "0","0", "0", "0"];
+var blankInternational = ["0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0"];
 
 
 // Possible Answers //
@@ -85,7 +85,7 @@ var texas = ["t", "e", "x", "a", "s"];
 var trio = ["t", "r", "i", "o"];
 var airplane = ["a", "i", "r", "p", "l", "a", "n", "e"];
 var hiphop = ["h", "i", "p", "h", "o", "p"];
-var international = ["i", "n", "t", "e", "r", "n", "a", "t", "i", "o","n", "a", "l"];
+var international = ["i", "n", "t", "e", "r", "n", "a", "t", "i", "o", "n", "a", "l"];
 
 // Array of possible answers + Random Answer Generator //
 
@@ -106,18 +106,26 @@ var computerGuess = possibleAnswer[Math.floor(Math.random() * possibleAnswer.len
 //     }
 // }
 
-// Improved Formula (this one is for texas)
 
-document.onkeyup = function() {
-        var userGuess = String.fromCharCode(event.keyCode).toLowerCase();
-        console.log(userGuess);
-        console.log(computerGuess);
-        if ((computerGuess == possibleAnswer[0]) && (texas.includes(userGuess))) {
-            console.log("win");
-        } else {
-            console.log("lose");
-        }
+console.log(blankTexas);
+
+
+
+// Improved Formula (this one is for texas). Maybe actually this isn't improved...
+
+document.onkeyup = function () {
+    var userGuess = String.fromCharCode(event.keyCode).toLowerCase();
+    console.log(userGuess);
+    console.log(computerGuess);
+    if ((computerGuess == possibleAnswer[0]) && (texas.includes(userGuess))) {
+        console.log("win");
+        blankTexas.splice(0, 1, ("" + userGuess));
+        console.log(blankTexas);
+    } else {
+        console.log("lose");
+    }
 }
+
 
 // d1) If letter is true --> replace according blank space with letter
 
