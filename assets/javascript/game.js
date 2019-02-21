@@ -54,28 +54,31 @@ var letterSlot = document.getElementById("letterSlot");
 var letterReveal = document.getElementById("letterReveal");
 var letterGuessed = document.getElementById("letterGuessed");
 var guessesLeft = document.getElementById("guessesLeft");
+// When letter is correct add it to the rightAnswer array //
+var rightAnswer = []
+var wrongAnswer = []
 
 // General Variables //
 
 var letters = ["0", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 
-// Testing Words in Console Log //
-//Texas//
-console.log((letters[20]) + (letters[5]) + (letters[24]) + (letters[1]) + (letters[19]));
-//Trio//
-console.log((letters[20]) + (letters[18]) + (letters[9]) + (letters[15]));
-//Airplane//
-console.log((letters[1]) + (letters[9]) + (letters[18]) + (letters[16]) + (letters[12]) + (letters[1]) + (letters[14]) + (letters[5]));
-//HipHop//
-console.log((letters[8]) + (letters[9]) + (letters[16]) + (letters[8]) + (letters[15]) + (letters[16]));
-//International//
-console.log((letters[9]) + (letters[14]) + (letters[20]) + (letters[5]) + (letters[18]) + (letters[14]) + (letters[1]) + (letters[20]) + (letters[9]) + (letters[15]) + (letters[14]) + (letters[1]) + (letters[12]));
+// // Testing Words in Console Log //
+// //Texas//
+// console.log((letters[20]) + (letters[5]) + (letters[24]) + (letters[1]) + (letters[19]));
+// //Trio//
+// console.log((letters[20]) + (letters[18]) + (letters[9]) + (letters[15]));
+// //Airplane//
+// console.log((letters[1]) + (letters[9]) + (letters[18]) + (letters[16]) + (letters[12]) + (letters[1]) + (letters[14]) + (letters[5]));
+// //HipHop//
+// console.log((letters[8]) + (letters[9]) + (letters[16]) + (letters[8]) + (letters[15]) + (letters[16]));
+// //International//
+// console.log((letters[9]) + (letters[14]) + (letters[20]) + (letters[5]) + (letters[18]) + (letters[14]) + (letters[1]) + (letters[20]) + (letters[9]) + (letters[15]) + (letters[14]) + (letters[1]) + (letters[12]));
 
 
-document.onkeyup = function (event) {
-    var userGuess = event.key;
+document.onkeyup = function() {
+    var userGuess = String.fromCharCode(event.keyCode).toLowerCase();
     console.log(userGuess)
-};
+}
 
 // Possible Answers //
 
@@ -88,29 +91,25 @@ var international = [(letters[9]) + (letters[14]) + (letters[20]) + (letters[5])
 // Array of possible answers + Random Answer Generator //
 
 var possibleAnswer = [texas, trio, airplane, hiphop, international];
-var answerPrompt = possibleAnswer[Math.floor(Math.random() * possibleAnswer.length)];
+var computerGuess = possibleAnswer[Math.floor(Math.random() * possibleAnswer.length)];
 
-// Run function to set up a prompt //
+// I need to find a way for the computer's choice to be established.
 
-
-// This function is run whenever the user presses a key. 
-document.onkeyup = function (event) {
-
-    // Determines which key was pressed.
-    var userGuess = event.key;
-    console.log(userGuess)
+if ((computerGuess === possibleAnswer[0]) && (userGuess === (letters[20]))) {
+    console.log("liftoff!")
 }
 
-
-// d) Letter is either True or False (matches or doesn't):
-
+console.log(computerGuess)
 // d1) If letter is true --> replace according blank space with letter
 
-//checking to see if "if" statement works
-if (answerPrompt === possibleAnswer[2]) {
-    console.log("Khruangbin!");
-}
+// Function to push answer to rightAnswer array //
 
+// if (userGuess === "correct") {
+//     rightAnswer.push(" ")
+// }
+// if (userGuess === "incorrect") {
+//     wrongAnswer.push(" ")
+// }
 
 
 
