@@ -76,11 +76,6 @@ var wrongAnswer = []
 // console.log((letters[9]) + (letters[14]) + (letters[20]) + (letters[5]) + (letters[18]) + (letters[14]) + (letters[1]) + (letters[20]) + (letters[9]) + (letters[15]) + (letters[14]) + (letters[1]) + (letters[12]));
 
 
-document.onkeyup = function() {
-    var userGuess = String.fromCharCode(event.keyCode).toLowerCase();
-    console.log(userGuess)
-}
-
 // Possible Answers //
 
 var texas = ["t", "e", "x", "a", "s"];
@@ -96,7 +91,18 @@ var computerGuess = possibleAnswer[Math.floor(Math.random() * possibleAnswer.len
 
 // I need to find a way for the computer's choice to be established.
 
-console.log(trio)
+document.onkeyup = function() {
+    var userGuess = String.fromCharCode(event.keyCode).toLowerCase();
+    console.log(userGuess);
+}
+
+// console.log(trio[Math.floor(Math.random() * trio.length)]);
+console.log(computerGuess)
+if (computerGuess == possibleAnswer[0]) {
+    console.log("it was texas!");
+} else {
+    console.log("it wasnt texas!")
+}
 
 
 // if (computerGuess === possibleAnswer[0]) {
