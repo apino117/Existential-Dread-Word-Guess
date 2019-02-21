@@ -45,23 +45,6 @@
 
 // --------------------------------- //
 
-
-// START OF JAVASCRIPT //
-
-// Doc-ID Variables for HTML //
-var wins = document.getElementById("wins");
-var letterSlot = document.getElementById("letterSlot");
-var letterReveal = document.getElementById("letterReveal");
-var letterGuessed = document.getElementById("letterGuessed");
-var guessesLeft = document.getElementById("guessesLeft");
-// When letter is correct add it to the rightAnswer array //
-var rightAnswer = []
-var wrongAnswer = []
-
-// General Variables //
-
-
-
 // // Testing Words in Console Log // ---- Save this to see why it didnt work but basically scrap it. 
 // var letters = ["0", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 // //Texas//
@@ -76,40 +59,66 @@ var wrongAnswer = []
 // console.log((letters[9]) + (letters[14]) + (letters[20]) + (letters[5]) + (letters[18]) + (letters[14]) + (letters[1]) + (letters[20]) + (letters[9]) + (letters[15]) + (letters[14]) + (letters[1]) + (letters[12]));
 
 
+
+// START OF JAVASCRIPT //
+
+// Doc-ID Variables for HTML //
+var wins = document.getElementById("wins");
+var letterSlot = document.getElementById("letterSlot");
+var letterReveal = document.getElementById("letterReveal");
+var letterGuessed = document.getElementById("letterGuessed");
+var guessesLeft = document.getElementById("guessesLeft");
+// When letter is correct add it to the rightAnswer array //
+var rightAnswer = []
+var wrongAnswer = []
+// For each word we'll have an according variable with blank spaces so they can be replaced mayb? //
+var blankTexas = ["0", "0", "0", "0", "0"];
+var blankTrio = ["0", "0", "0", "0"];
+var blankAirplane = ["0", "0", "0", "0", "0", "0", "0", "0"];
+var blankHiphop = ["0", "0", "0", "0", "0", "0"];
+var blankInternational = ["0", "0", "0", "0", "0", "0", "0", "0", "0", "0","0", "0", "0"];
+
+
 // Possible Answers //
 
 var texas = ["t", "e", "x", "a", "s"];
 var trio = ["t", "r", "i", "o"];
 var airplane = ["a", "i", "r", "p", "l", "a", "n", "e"];
-var hiphop = ["h", "i", "p", "h", "o", "p"]
-var international = ["i", "n", "t", "e", "r", "n", "a", "t", "i", "o","n", "a", "l"]
+var hiphop = ["h", "i", "p", "h", "o", "p"];
+var international = ["i", "n", "t", "e", "r", "n", "a", "t", "i", "o","n", "a", "l"];
 
 // Array of possible answers + Random Answer Generator //
 
 var possibleAnswer = [texas, trio, airplane, hiphop, international];
 var computerGuess = possibleAnswer[Math.floor(Math.random() * possibleAnswer.length)];
 
-// I need to find a way for the computer's choice to be established.
 
-document.onkeyup = function() {
-    var userGuess = String.fromCharCode(event.keyCode).toLowerCase();
-    console.log(userGuess);
-}
+// // If statement for when answer is texas
 
-// console.log(trio[Math.floor(Math.random() * trio.length)]);
-console.log(computerGuess)
-if (computerGuess == possibleAnswer[0]) {
-    console.log("it was texas!");
-} else {
-    console.log("it wasnt texas!")
-}
-
-
-// if (computerGuess === possibleAnswer[0]) {
-//     console.log("liftoff!");
+// document.onkeyup = function() {
+//     var userGuess = String.fromCharCode(event.keyCode).toLowerCase();
+//     console.log(userGuess);
+//     console.log(computerGuess);
+//     if ((computerGuess == possibleAnswer[0]) && ((userGuess === "t") || (userGuess === "e") || (userGuess === "x") || (userGuess === "a") || (userGuess === "s"))) {
+//         console.log("yeah man!")
+//     } else {
+//         console.log("nope!")
+//     }
 // }
 
-// console.log(computerGuess)
+// Improved Formula (this one is for texas)
+
+document.onkeyup = function() {
+        var userGuess = String.fromCharCode(event.keyCode).toLowerCase();
+        console.log(userGuess);
+        console.log(computerGuess);
+        if ((computerGuess == possibleAnswer[0]) && (texas.includes(userGuess))) {
+            console.log("win");
+        } else {
+            console.log("lose");
+        }
+}
+
 // d1) If letter is true --> replace according blank space with letter
 
 // Function to push answer to rightAnswer array //
