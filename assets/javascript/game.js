@@ -60,9 +60,10 @@ var wrongAnswer = []
 
 // General Variables //
 
-var letters = ["0", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 
-// // Testing Words in Console Log //
+
+// // Testing Words in Console Log // ---- Save this to see why it didnt work but basically scrap it. 
+// var letters = ["0", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 // //Texas//
 // console.log((letters[20]) + (letters[5]) + (letters[24]) + (letters[1]) + (letters[19]));
 // //Trio//
@@ -82,11 +83,11 @@ document.onkeyup = function() {
 
 // Possible Answers //
 
-var texas = [(letters[20]) + (letters[5]) + (letters[24]) + (letters[1]) + (letters[19])];
-var trio = [(letters[20]) + (letters[18]) + (letters[9]) + (letters[15])];
-var airplane = [(letters[1]) + (letters[9]) + (letters[18]) + (letters[16]) + (letters[12]) + (letters[1]) + (letters[14]) + (letters[5])];
-var hiphop = [(letters[8]) + (letters[9]) + (letters[16]) + (letters[8]) + (letters[15]) + (letters[16])]
-var international = [(letters[9]) + (letters[14]) + (letters[20]) + (letters[5]) + (letters[18]) + (letters[14]) + (letters[1]) + (letters[20]) + (letters[9]) + (letters[15]) + (letters[14]) + (letters[1]) + (letters[12])]
+var texas = ["t", "e", "x", "a", "s"];
+var trio = ["t", "r", "i", "o"];
+var airplane = ["a", "i", "r", "p", "l", "a", "n", "e"];
+var hiphop = ["h", "i", "p", "h", "o", "p"]
+var international = ["i", "n", "t", "e", "r", "n", "a", "t", "i", "o","n", "a", "l"]
 
 // Array of possible answers + Random Answer Generator //
 
@@ -95,14 +96,19 @@ var computerGuess = possibleAnswer[Math.floor(Math.random() * possibleAnswer.len
 
 // I need to find a way for the computer's choice to be established.
 
-if ((computerGuess === possibleAnswer[0]) && (userGuess === (letters[20]))) {
-    console.log("liftoff!")
-}
+console.log(trio)
 
-console.log(computerGuess)
+
+// if (computerGuess === possibleAnswer[0]) {
+//     console.log("liftoff!");
+// }
+
+// console.log(computerGuess)
 // d1) If letter is true --> replace according blank space with letter
 
 // Function to push answer to rightAnswer array //
+
+// Use random method to create a loop so that when the user guesses something it can be compared to a random letter in the computerguess (it's then looped through each letter)
 
 // if (userGuess === "correct") {
 //     rightAnswer.push(" ")
