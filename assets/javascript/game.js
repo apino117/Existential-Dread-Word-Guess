@@ -72,6 +72,8 @@ var letterReveal = document.getElementById("letterReveal");
 var letterGuessed = document.getElementById("letterGuessed");
 var guessesLeft = document.getElementById("guessesLeft");
 
+var guessCounter = 13;
+
 // For each word we'll have an according variable with blank spaces so they can be replaced mayb? //
 var blankTexas = ["_", "_", "_", "_", "_"];
 var blankTrio = ["0", "0", "0", "0"];
@@ -103,6 +105,13 @@ var computerGuess = texas;
 
 
 // f) If all guesses run out display lose message and restart loop with same (?) question
+
+
+
+
+
+
+
 
 
 
@@ -216,6 +225,8 @@ document.onkeyup = function () {
             console.log(blankTexas);
         } else {
             console.log("lose");
+            guessCounter--;
+            guessesLeft.textContent = ("You've got " + guessCounter + " more tries!");
         }
     }
 }
