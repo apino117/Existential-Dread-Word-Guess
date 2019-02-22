@@ -169,8 +169,6 @@ document.onkeyup = function () {
     // Shows us what we typed
     console.log(userGuess);
 
-
-
     // If the answer is texas
     if (computerGuess = possibleAnswer[0]) {
 
@@ -223,10 +221,30 @@ document.onkeyup = function () {
 
             // Show us the new blank texas array to check
             console.log(blankTexas);
+        
+        // Finally if it's the wrong letter
         } else {
+
+            // Just to make sure we know
             console.log("lose");
+
+            // Lose a guess
             guessCounter--;
+
+            // Update guess counter
             guessesLeft.textContent = ("You've got " + guessCounter + " more tries!");
+
+            //need to push to unlikely suspects array
+
+            // If you have no guesses left
+            if (guessCounter === 0) {
+
+                // Lose screen!
+                alert("You lost! But no worries, you must lose to know what it is to win!");
+
+                // Reset everything
+                location.reload();
+            }
         }
     }
 }
