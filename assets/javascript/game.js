@@ -62,70 +62,61 @@
 
 // START OF JAVASCRIPT //
 
+// Establish baseline for variable
+var guessesLeft = 12;
+
 // Doc-ID Variables for HTML //
 var wins = document.getElementById("wins");
 var letterSlot = document.getElementById("letterSlot");
 var letterReveal = document.getElementById("letterReveal");
 var letterGuessed = document.getElementById("letterGuessed");
 var guessesLeft = document.getElementById("guessesLeft");
-// When letter is correct add it to the rightAnswer array //
-var rightAnswer = []
-var wrongAnswer = []
+
 // For each word we'll have an according variable with blank spaces so they can be replaced mayb? //
-var blankTexas = ["0", "0", "0", "0", "0"];
+var blankTexas = ["0", "1", "2", "3", "4"];
 var blankTrio = ["0", "0", "0", "0"];
 var blankAirplane = ["0", "0", "0", "0", "0", "0", "0", "0"];
 var blankHiphop = ["0", "0", "0", "0", "0", "0"];
 var blankInternational = ["0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0"];
 
 
-// Possible Answers //
-
+// Possible answers as arrays of letters
 var texas = ["t", "e", "x", "a", "s"];
 var trio = ["t", "r", "i", "o"];
 var airplane = ["a", "i", "r", "p", "l", "a", "n", "e"];
 var hiphop = ["h", "i", "p", "h", "o", "p"];
 var international = ["i", "n", "t", "e", "r", "n", "a", "t", "i", "o", "n", "a", "l"];
 
-// Array of possible answers + Random Answer Generator //
-
+// Array of possible answers
 var possibleAnswer = [texas, trio, airplane, hiphop, international];
-var computerGuess = possibleAnswer[Math.floor(Math.random() * possibleAnswer.length)];
+
+// Random answer generator
+// var computerGuess = possibleAnswer[Math.floor(Math.random() * possibleAnswer.length)];
+
+// Comment this out and un-comment the above when we're ready to randomly choose a word, for now let's use texas.
+var computerGuess = texas;
 
 
 // // If statement for when answer is texas
 
-// document.onkeyup = function() {
+// // When a key gets hit
+// document.onkeyup = function () {
+
+//     // Makes sure no matter what the guess it's in lower case
 //     var userGuess = String.fromCharCode(event.keyCode).toLowerCase();
 //     console.log(userGuess);
 //     console.log(computerGuess);
-//     if ((computerGuess == possibleAnswer[0]) && ((userGuess === "t") || (userGuess === "e") || (userGuess === "x") || (userGuess === "a") || (userGuess === "s"))) {
-//         console.log("yeah man!")
+//     if ((computerGuess == possibleAnswer[0]) && (texas.includes(userGuess))) {
+//         console.log("win");
+//         blankTexas.splice(0, 1, ("" + userGuess));
+//         console.log(blankTexas);
 //     } else {
-//         console.log("nope!")
+//         console.log("lose");
 //     }
 // }
 
 
-console.log(blankTexas);
-
-
-
-// Improved Formula (this one is for texas). Maybe actually this isn't improved...
-
-document.onkeyup = function () {
-    var userGuess = String.fromCharCode(event.keyCode).toLowerCase();
-    console.log(userGuess);
-    console.log(computerGuess);
-    if ((computerGuess == possibleAnswer[0]) && (texas.includes(userGuess))) {
-        console.log("win");
-        blankTexas.splice(0, 1, ("" + userGuess));
-        console.log(blankTexas);
-    } else {
-        console.log("lose");
-    }
-}
-
+// Put in a for loop so that when the computer guess is selected we have the userguess run through the array to see if it matches. Then we can update the according spot in the array. 
 
 // d1) If letter is true --> replace according blank space with letter
 
@@ -155,5 +146,34 @@ document.onkeyup = function () {
 
 
 
+// The section below is a notepad, planning ideas to move into code above
+
+
+
+
+// Show us computer's guess so we have something to check against
+console.log(computerGuess)
+
+// When a key is hit
+document.onkeyup = function() {
+
+    // Making sure all is lower case
+    userGuess = String.fromCharCode(event.keyCode).toLowerCase();
+
+    // Shows us what we typed
+    console.log(userGuess);
+
+    // If the answer is texas
+    if (computerGuess = possibleAnswer[0]) {
+        for (i = 0; i<texas.length; i++) {
+            if (texas.includes(userGuess[i])) {
+                blankTexas.splice([i], 1, (userGuess));
+                console.log(blankTexas);
+            } else {
+                console.log("lose");
+            }
+        }
+    }
+}
 
 
