@@ -172,14 +172,15 @@ document.onkeyup = function () {
     // If the answer is texas
     if (computerGuess = possibleAnswer[0]) {
 
-        //Establish where in the HTML to replace this
-        letterReveal.textContent = blankTexas;
 
         // If the user guess is t
         if (userGuess == "t") {
 
             // Replace slot 0 with t
             blankTexas.splice([0], 1, (userGuess));
+
+            //Establish where in the HTML to replace this
+            letterReveal.textContent = blankTexas;
 
             // Show us the new blank texas array to check
             console.log(blankTexas);
@@ -190,14 +191,20 @@ document.onkeyup = function () {
             // Replace slot 1 with e
             blankTexas.splice([1], 1, (userGuess));
 
+            //Establish where in the HTML to replace this
+            letterReveal.textContent = blankTexas;
+
             // Show us the new blank texas array to check
             console.log(blankTexas);
 
             // If the usergues is x
         } else if (userGuess == "x") {
 
-            // Replace slot 1 with x
+            // Replace slot 2 with x
             blankTexas.splice([2], 1, (userGuess));
+
+            //Establish where in the HTML to replace this
+            letterReveal.textContent = blankTexas;
 
             // Show us the new blank texas array to check
             console.log(blankTexas);
@@ -205,8 +212,11 @@ document.onkeyup = function () {
             // If the usergues is a
         } else if (userGuess == "a") {
 
-            // Replace slot 1 with a
+            // Replace slot 3 with a
             blankTexas.splice([3], 1, (userGuess));
+
+            //Establish where in the HTML to replace this
+            letterReveal.textContent = blankTexas;
 
             // Show us the new blank texas array to check
             console.log(blankTexas);
@@ -216,13 +226,16 @@ document.onkeyup = function () {
             // If the usergues is s
         } else if (userGuess == "s") {
 
-            // Replace slot 1 with s
+            // Replace slot 4 with s
             blankTexas.splice([4], 1, (userGuess));
+
+            //Establish where in the HTML to replace this
+            letterReveal.textContent = blankTexas;
 
             // Show us the new blank texas array to check
             console.log(blankTexas);
-        
-        // Finally if it's the wrong letter
+
+            // Finally if it's the wrong letter
         } else {
 
             // Just to make sure we know
@@ -245,6 +258,7 @@ document.onkeyup = function () {
                 // Reset everything
                 location.reload();
             }
+
         }
     }
 }
