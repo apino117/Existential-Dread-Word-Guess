@@ -98,18 +98,110 @@ var possibleAnswer = [texas, trio, airplane, hiphop, international];
 // Comment this out and un-comment the above when we're ready to randomly choose a word, for now let's use texas.
 var computerGuess = texas;
 
+// The below is me doing a longer more written out method
+
+// // When a key is hit
+// document.onkeyup = function () {
+
+//     // Making sure all is lower case
+//     userGuess = String.fromCharCode(event.keyCode).toLowerCase();
+
+//     // Shows us what we typed
+//     console.log(userGuess);
+
+//     // If the answer is texas
+//     if (computerGuess = possibleAnswer[0]) {
 
 
-// e) If all letters are filled display win message and restart loop with a different question
+//         // If the user guess is t
+//         if (userGuess == "t") {
 
+//             // Replace slot 0 with t
+//             blankTexas.splice([0], 1, (userGuess));
 
+//             //Establish where in the HTML to replace this
+//             letterReveal.textContent = blankTexas;
 
-// f) If all guesses run out display lose message and restart loop with same (?) question
+//             // Show us the new blank texas array to check
+//             console.log(blankTexas);
 
+//             // If the userguess is e
+//         } else if (userGuess == "e") {
 
+//             // Replace slot 1 with e
+//             blankTexas.splice([1], 1, (userGuess));
 
+//             //Establish where in the HTML to replace this
+//             letterReveal.textContent = blankTexas;
 
+//             // Show us the new blank texas array to check
+//             console.log(blankTexas);
 
+//             // If the usergues is x
+//         } else if (userGuess == "x") {
+
+//             // Replace slot 2 with x
+//             blankTexas.splice([2], 1, (userGuess));
+
+//             //Establish where in the HTML to replace this
+//             letterReveal.textContent = blankTexas;
+
+//             // Show us the new blank texas array to check
+//             console.log(blankTexas);
+
+//             // If the usergues is a
+//         } else if (userGuess == "a") {
+
+//             // Replace slot 3 with a
+//             blankTexas.splice([3], 1, (userGuess));
+
+//             //Establish where in the HTML to replace this
+//             letterReveal.textContent = blankTexas;
+
+//             // Show us the new blank texas array to check
+//             console.log(blankTexas);
+
+//             // If it's none of those letters
+
+//             // If the usergues is s
+//         } else if (userGuess == "s") {
+
+//             // Replace slot 4 with s
+//             blankTexas.splice([4], 1, (userGuess));
+
+//             //Establish where in the HTML to replace this
+//             letterReveal.textContent = blankTexas;
+
+//             // Show us the new blank texas array to check
+//             console.log(blankTexas);
+
+//             // Finally if it's the wrong letter
+//         } else {
+
+//             // Just to make sure we know
+//             console.log("lose");
+
+//             // Lose a guess
+//             guessCounter--;
+
+//             // Update guess counter
+//             guessesLeft.textContent = ("You've got " + guessCounter + " more tries!");
+
+//             //need to push to unlikely suspects array
+
+//             // If you have no guesses left
+//             if (guessCounter === 0) {
+
+//                 // Lose screen!
+//                 alert("You lost! But no worries, you must lose to know what it is to win!");
+
+//                 // Reset everything
+//                 location.reload();
+//             }
+
+//         }
+//     }
+// }
 
 
 
@@ -120,11 +212,11 @@ var computerGuess = texas;
 
 
 
-// The below is me trying to use the .include method
+// // The below is me trying to use the .include method
 
 
-// Show us computer's guess so we have something to check against
-console.log(computerGuess)
+// // Show us computer's guess so we have something to check against
+// console.log(computerGuess)
 
 // // When a key is hit
 // document.onkeyup = function() {
@@ -136,16 +228,16 @@ console.log(computerGuess)
 //     console.log(userGuess);
 
 //     // If the answer is texas
-//     if (computerGuess = possibleAnswer[0]) {
+//     if (computerGuess == possibleAnswer[0]) {
 
 //         // Run a loop through each letter in texas
 //         for (i = 0; i<texas.length; i++) {
 
 //             // If the user guess is a letter included in texas
-//             if (texas.includes(userGuess)) {
+//             if (texas[i] == userGuess) {
 
 //                 // Take the user guess and replace one element in blank texas (this is the issue)
-//                 blankTexas.splice([i], 1, (userGuess));
+//                 blankTexas.splice(i, 1, userGuess);
 
 //                 // Show us the new blank texas array to check
 //                 console.log(blankTexas);
@@ -158,107 +250,3 @@ console.log(computerGuess)
 //     }
 // }
 
-// The below is me doing a longer more written out method
-
-// When a key is hit
-document.onkeyup = function () {
-
-    // Making sure all is lower case
-    userGuess = String.fromCharCode(event.keyCode).toLowerCase();
-
-    // Shows us what we typed
-    console.log(userGuess);
-
-    // If the answer is texas
-    if (computerGuess = possibleAnswer[0]) {
-
-
-        // If the user guess is t
-        if (userGuess == "t") {
-
-            // Replace slot 0 with t
-            blankTexas.splice([0], 1, (userGuess));
-
-            //Establish where in the HTML to replace this
-            letterReveal.textContent = blankTexas;
-
-            // Show us the new blank texas array to check
-            console.log(blankTexas);
-
-            // If the userguess is e
-        } else if (userGuess == "e") {
-
-            // Replace slot 1 with e
-            blankTexas.splice([1], 1, (userGuess));
-
-            //Establish where in the HTML to replace this
-            letterReveal.textContent = blankTexas;
-
-            // Show us the new blank texas array to check
-            console.log(blankTexas);
-
-            // If the usergues is x
-        } else if (userGuess == "x") {
-
-            // Replace slot 2 with x
-            blankTexas.splice([2], 1, (userGuess));
-
-            //Establish where in the HTML to replace this
-            letterReveal.textContent = blankTexas;
-
-            // Show us the new blank texas array to check
-            console.log(blankTexas);
-
-            // If the usergues is a
-        } else if (userGuess == "a") {
-
-            // Replace slot 3 with a
-            blankTexas.splice([3], 1, (userGuess));
-
-            //Establish where in the HTML to replace this
-            letterReveal.textContent = blankTexas;
-
-            // Show us the new blank texas array to check
-            console.log(blankTexas);
-
-            // If it's none of those letters
-
-            // If the usergues is s
-        } else if (userGuess == "s") {
-
-            // Replace slot 4 with s
-            blankTexas.splice([4], 1, (userGuess));
-
-            //Establish where in the HTML to replace this
-            letterReveal.textContent = blankTexas;
-
-            // Show us the new blank texas array to check
-            console.log(blankTexas);
-
-            // Finally if it's the wrong letter
-        } else {
-
-            // Just to make sure we know
-            console.log("lose");
-
-            // Lose a guess
-            guessCounter--;
-
-            // Update guess counter
-            guessesLeft.textContent = ("You've got " + guessCounter + " more tries!");
-
-            //need to push to unlikely suspects array
-
-            // If you have no guesses left
-            if (guessCounter === 0) {
-
-                // Lose screen!
-                alert("You lost! But no worries, you must lose to know what it is to win!");
-
-                // Reset everything
-                location.reload();
-            }
-
-        }
-    }
-}
