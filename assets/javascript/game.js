@@ -75,11 +75,11 @@ var guessesLeft = document.getElementById("guessesLeft");
 var guessCounter = 13;
 
 // For each word we'll have an according variable with blank spaces so they can be replaced mayb? //
-var blankTexas = ["_", "_", "_", "_", "_"];
-var blankTrio = ["0", "0", "0", "0"];
-var blankAirplane = ["0", "0", "0", "0", "0", "0", "0", "0"];
-var blankHiphop = ["0", "0", "0", "0", "0", "0"];
-var blankInternational = ["0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0"];
+var blankTexas = ["_" , "_" , "_" , "_" , "_" ];
+var blankTrio = ["_" , "_" , "_" , "_" ];
+var blankAirplane = ["_" , "_" , "_" , "_" , "_" , "_" , "_" , "_" ];
+var blankHiphop = ["_" , "_" , "_" , "_" , "_" , "_" ];
+var blankInternational = ["_" , "_" , "_" , "_" , "_" , "_" , "_" , "_" , "_" , "_" , "_" , "_" , "_" ];
 
 
 // Possible answers as arrays of letters
@@ -96,7 +96,7 @@ var possibleAnswer = [texas, trio, airplane, hiphop, international];
 // var computerGuess = possibleAnswer[Math.floor(Math.random() * possibleAnswer.length)];
 
 // Comment this out and un-comment the above when we're ready to randomly choose a word, for now let's use texas.
-var computerGuess = texas;
+// var computerGuess = possibleAnswer[0];
 
 // The below is me doing a longer more written out method
 
@@ -250,3 +250,79 @@ var computerGuess = texas;
 //     }
 // }
 
+
+// ----------------------------------------------------------------------------------------------------------
+
+// Trying out Petrell code idea:
+
+
+
+// Making a blankGuess array
+var blankGuess = [
+
+    blankTexas,
+    blankTrio,
+    blankAirplane,
+    blankHiphop,
+    blankInternational,
+
+];
+
+// Make Computer choose a word
+var computerGuess = possibleAnswer[Math.floor(Math.random() * possibleAnswer.length)];
+
+// Console log to check computer guess
+console.log(computerGuess);
+
+// Make blank guess line up appropriately
+
+// For every possible answer
+for (i = 0; i < possibleAnswer.length; i++) {
+
+    // If the computer guess is whatever answer in the array
+    if (computerGuess == possibleAnswer[i]) {
+
+        // The blank guess is of that same index
+        letterReveal.textContent = blankGuess[i];
+
+        // Check
+        console.log(blankGuess[i]);
+    }
+}
+
+
+
+
+
+// Onkeyup capture
+document.onkeyup = function () {
+
+    // Lowercase
+    userGuess = String.fromCharCode(event.Key).toLowerCase();
+
+    // For loop to match letters 
+
+    // For every letter in the computer's guess
+    for(i = 0; i < computerGuess.length; i++) {
+
+        // If the user's guess is equal to that letter
+        if(computerGuess[i] == userGuess) {
+
+            // Splice the userguess at the index of the computerguess
+            blankGuess.splice(i, 1, userGuess);
+
+            // Console log to check
+            letterReveal.textContent = blankGuess;
+        }
+    }
+
+}
+
+// Petrell Code //
+
+// for(var i = 0; i < newArr.length; i++) {
+//     console.log(newArr[i], 'newArr[i]', guess, 'guess');
+//     if(newArr[i] == guess) {        
+//         newArr.splice(i, 1, 'x');
+//     }
+// }
