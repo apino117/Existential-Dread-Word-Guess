@@ -75,11 +75,11 @@ var guessesLeft = document.getElementById("guessesLeft");
 var guessCounter = 13;
 
 // For each word we'll have an according variable with blank spaces so they can be replaced mayb? //
-var blankTexas = ["_" , "_" , "_" , "_" , "_" ];
-var blankTrio = ["_" , "_" , "_" , "_" ];
-var blankAirplane = ["_" , "_" , "_" , "_" , "_" , "_" , "_" , "_" ];
-var blankHiphop = ["_" , "_" , "_" , "_" , "_" , "_" ];
-var blankInternational = ["_" , "_" , "_" , "_" , "_" , "_" , "_" , "_" , "_" , "_" , "_" , "_" , "_" ];
+var blankTexas = ["_", "_", "_", "_", "_"];
+var blankTrio = ["_", "_", "_", "_"];
+var blankAirplane = ["_", "_", "_", "_", "_", "_", "_", "_"];
+var blankHiphop = ["_", "_", "_", "_", "_", "_"];
+var blankInternational = ["_", "_", "_", "_", "_", "_", "_", "_", "_", "_", "_", "_", "_"];
 
 
 // Possible answers as arrays of letters
@@ -258,7 +258,7 @@ var possibleAnswer = [texas, trio, airplane, hiphop, international];
 
 
 // Making a blankGuess array
-var blankGuess = [
+var blankOptions = [
 
     blankTexas,
     blankTrio,
@@ -268,11 +268,9 @@ var blankGuess = [
 
 ];
 
+
 // Make Computer choose a word
 var computerGuess = possibleAnswer[Math.floor(Math.random() * possibleAnswer.length)];
-
-// Console log to check computer guess
-console.log(computerGuess);
 
 // Make blank guess line up appropriately
 
@@ -282,42 +280,55 @@ for (i = 0; i < possibleAnswer.length; i++) {
     // If the computer guess is whatever answer in the array
     if (computerGuess == possibleAnswer[i]) {
 
-        // The blank guess is of that same index
-        letterReveal.textContent = blankGuess[i];
+        // // The blank guess is of that same index
+        letterReveal.textContent = blankOptions[i];
 
-        // Check
-        console.log(blankGuess[i]);
+        console.log(blankOptions[i]);
     }
 }
 
-
-
+// Console log to check computer guess
+console.log(computerGuess);
 
 
 // Onkeyup capture
 document.onkeyup = function () {
 
     // Lowercase
-    userGuess = String.fromCharCode(event.Key).toLowerCase();
+    userGuess = String.fromCharCode(event.keyCode).toLowerCase();
 
-    // For loop to match letters 
+    // Check capture
+    console.log(userGuess);
+    // Make blank guess line up appropriately
 
-    // For every letter in the computer's guess
-    for(i = 0; i < computerGuess.length; i++) {
+    // For every possible answer
+    for (i = 0; i < possibleAnswer.length; i++) {
 
-        // If the user's guess is equal to that letter
-        if(computerGuess[i] == userGuess) {
+        // If the computer guess is whatever answer in the array
+        if (computerGuess == possibleAnswer[i]) {
 
-            // Splice the userguess at the index of the computerguess
-            blankGuess.splice(i, 1, userGuess);
+            // For every letter in the computer's guess
+            for (j = 0; j < computerGuess.length; j++) {
 
-            // Console log to check
-            letterReveal.textContent = blankGuess;
+                // If the user's guess is equal to that letter
+                if (userGuess == computerGuess[j]) {
+
+                    // Splice the userguess one character at the index of the computerguess onto the blankoption selected
+                    blankOptions[i].splice(j, 1, userGuess);
+
+                    // Console log to check
+                    letterReveal.textContent = blankOptions[i];
+                }
+            }
+            
+            //check if it worked?
+            console.log(blankOptions[i]);
         }
+
+
     }
 
 }
-
 // Petrell Code //
 
 // for(var i = 0; i < newArr.length; i++) {
