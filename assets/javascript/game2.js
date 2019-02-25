@@ -31,7 +31,7 @@ var blankWords = [
 var blankslotText = document.getElementById("blankslot-text");
 
 // Establish a guessesremaining counter
-var guessremainCounter = 50;
+var guessremainCounter = 200;
 
 // Link guessremain counter to HTML
 var guessremainText = document.getElementById("guessesremaining-text")
@@ -43,8 +43,6 @@ var lettersguessedArray = []
 // Link to HTML
 var lettersGuessed = document.getElementById("lettersguessed");
 lettersGuessed.textContent = ("Letters Guessed: " + lettersguessedArray)
-
-
 
 // Computer needs to make a selection
 var computerGuess = answerWord[Math.floor(Math.random() * answerWord.length)];
@@ -100,13 +98,6 @@ document.onkeyup = function () {
 
             // 4. Update HTML
             blankslotText.textContent = blankGuess;
-
-            console.log(blankGuess)
-            console.log(computerGuess)
-
-            if ((blankGuess) === (computerGuess)) {
-                alert("Ah, you've won. Hmm. Good, yes I think that's good.")
-            }
 
             // If letter is not correct
         } else {

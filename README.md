@@ -1,19 +1,15 @@
 # Word-Guess-Game
 
-Welcome to Khraung-Man, the world's first Khraungbin based hangman game! It's not a trivia game (because nobody knows who Khraungbin is) it's actually a game designed to teach you about one of America's dopest and most fresh trio of musicans! Ready to learn?
+Welcome to Existential Dread Hangman, the world's leading dread-based word game! Everything's feels so okay!
 
-Every round you'll have a set of blank spaces that will eventually fill out for a full word. That word will be the answer to a question about Khraunbin, don't worry - it's stuff anyone would know!
+Every round you'll have a set of blank spaces that will eventually fill out for a full word which follows in our theme.
 
-Khruang-Man - just like the music - is for everyone! The universe smiles upon you and your extended family!
+Dread-Man - as the kids call it - is not for kids. These are heavy concepts suitable for no one under the age of 18.
 
-Khraung-Man's goal is to educate the world to the growing dopeness of Khraungbin.
+Dread-man's goal is to just be totally fine and everything's going to be okay.
 
-To get started, open it up and read those instruct-o's!
+To get started, open it up and dont worry about what will happen afterwards!
 
-If at anypoint you need help please contact us by googling Khraungbin and listening to their music, at which point you'll realize the answers you sought were inside you all along.
-
-![The Gang?](assets/images/Tour_Cartoon.jpg)
-
-
+If at anypoint you need help please rest assured by the time help arrives it won't matter. That warm feeling is them coming.
         
-      
+![OhmygodRobot](assets/images/ohmygod.gif)      
