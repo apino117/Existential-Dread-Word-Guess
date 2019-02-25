@@ -54,28 +54,31 @@ blankslotText.textContent = blankGuess
 
 
 
-// // Capture user guess (spoiler alert, everything happens in this function)
+// Capture user guess (spoiler alert, everything happens in this function)
 
-// // When a key is hit
-// document.onkeyup = function () {
+// When a key is hit
+document.onkeyup = function () {
 
-//     // Making sure all is lower case
-//     userGuess = String.fromCharCode(event.keyCode).toLowerCase();
+    // Making sure all is lower case
+    userGuess = String.fromCharCode(event.keyCode).toLowerCase();
 
-//     // Shows us what we typed
-//     console.log(userGuess);
+    // Shows us what we typed
+    console.log(userGuess);
 
-//     // Determine if the key was correct or not 
+    // Determine if the key was correct or not 
 
-//     // 1. Loop through each letter in the guess
-//     for (i = 0; i < computerGuess.length; i++) {
+    // 1. Loop through each letter in the guess
+    for (i = 0; i < computerGuess.length; i++) {
         
-//         // If the userguess is a key within the computer guess
-//         if (userGuess == computerGuess[i]) {
+        // If the userguess is a key within the computer guess
+        if (userGuess == computerGuess[i]) {
             
-//             // Replace the blank slot accordingly
-//             blankGuess.splice(i, 1, userGuess);
+            // Replace the blank slot accordingly
+            blankGuess.splice(i, 1, userGuess);
 
-//         }
-//     }
-// }
+            // Update HTML
+            blankslotText.textContent = blankGuess;
+
+        }
+    }
+}
