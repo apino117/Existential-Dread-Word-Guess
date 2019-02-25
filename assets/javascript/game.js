@@ -70,8 +70,10 @@ var goodguessCounter = 0;
 var wins = document.getElementById("wins");
 var letterReveal = document.getElementById("letterReveal");
 var letterGuessed = document.getElementById("letterGuessed");
-var guessesLeft = document.getElementById("guessesLeft");
+var unlikelySuspects = document.getElementById("unlikelySuspects");
 var goodGuess = document.getElementById("goodguessCounter");
+
+var letterGuessed = []
 
 
 // For each word we'll have an according variable with blank spaces so they can be replaced mayb? //
@@ -127,9 +129,10 @@ for (i = 0; i < possibleAnswer.length; i++) {
     }
 }
 
-// The below is me doing a longer more written out method
+// The below is me doing a (much) longer more written out method
 
 
+//1) Texas
 
 // When a key is hit
 document.onkeyup = function () {
@@ -288,6 +291,12 @@ document.onkeyup = function () {
             // Just to make sure we know
             console.log("lose");
 
+            // Attempt at getting unsuccessfull letter pushed to array 
+            
+            // letterGuessed.push(userGuess);
+
+            // unlikelySuspects.textContent = ("" + userGuess);
+
             // Lose a guess
             guessCounter--;
             
@@ -310,6 +319,7 @@ document.onkeyup = function () {
         }
     }
 }
+
 
 
 // ----------------------------------------------------------------------------------------------------------
