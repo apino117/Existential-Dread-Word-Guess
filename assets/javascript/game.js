@@ -1,3 +1,17 @@
+// Jquery didnt even work for the audio, why cant audio work?!?!?
+// var bgMusic = document.createElement("audio");
+// bgMusic.setAttribute("src", "assets/Dread-Man Background Music.mp3");
+// $(document).ready(function () {
+//     bgMusic.play();
+// });
+
+// Attempt to hide music player after click
+// var audioWrapper = document.getElementById("audio-Wrapper")
+// var bgMusic = document.getElementById("bgMusic");
+// bgMusic.onclick = function() {
+//     document.getElementById("audio-Wrapper").style.visibility = "hidden";
+// }
+
 // Establish answer words as individual letters
 var free = ["f", "r", "e", "e"];
 var scared = ["s", "c", "a", "r", "e", "d"]
@@ -46,6 +60,7 @@ lettersGuessed.textContent = ("Letters Guessed: " + lettersguessedArray)
 
 // Computer needs to make a selection
 var computerGuess = answerWord[Math.floor(Math.random() * answerWord.length)];
+
 
 
 // Make blank guess line up with computer guess

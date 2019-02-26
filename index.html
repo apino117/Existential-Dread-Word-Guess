@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
+    <!-- JQuery (just for the audio) (and it didnt even work) -->
+    <!-- <script src="https://code.jquery.com/jquery.js"></script> -->
 </head>
 
 <body>
@@ -44,7 +46,8 @@
                         <div class="row" id="hints-wrapper">
                             <h3>Losing is easy, winning is harder. In this game, although it's impossible to achieve a
                                 <i>"technical"</i> or <i>"tangible"</i> victory you will have the immense satisfaction
-                                of having correctly guessed a word, an invaluable experience.</h3>
+                                of having correctly guessed a word, which in and of itself is a rich, warm experience.
+                            </h3>
                             <h3>Here are some hints since they're definitely on to us:</h3>
                             <ol>
                                 <li>
@@ -101,10 +104,19 @@
     <!-- Javascript -->
     <script src="assets/javascript/game.js"></script>
 
+    <!-- Audio -->
+    <div id="audio-wrapper">
+        <audio id="bgMusic" controls>
+            <source src="assets/Dread-Man Background Music.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+
     <!-- Footer -->
-    <footer class="blockquote-footer">
+    <footer class="footer">
         <small class="text-muted">
-            Copyright © AP Incorporated, 2019
+            <p id="copyright-text">
+                Copyright © AP Incorporated, 2019 - "Dream-Man Background Music" is an Original Composition by DJ Watcha
+            </p>
         </small>
     </footer>
 

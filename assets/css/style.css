@@ -11,6 +11,11 @@ body {
     margin-top: 96px;
 }
 
+/* Hide background music */
+#bgMusic {
+    size: 10px;
+}
+
 /* Header Attributes */
 h1 {
     font-family: fantasy;
@@ -29,7 +34,8 @@ h2, h3 {
 
 /* Text content in the headers */
 #hangman-text {
-    color: rgb(247, 255, 0);
+    color: #e1f0ff!important;
+    text-shadow: 2px 2px #e8030385;
 }
 
 /* Some styles for the headers */
@@ -58,4 +64,13 @@ h2, h3, h4, h5, h6, li {
 
 #tagline-row {
     margin-top: -15px;
+}
+
+/* Footer and Music */
+
+#copyright-text {
+    color: #e1f0ff!important;
+    text-shadow: 2px 2px #e8030385;
+    margin-left: 10px;
+    margin-top: 20px;
 }
