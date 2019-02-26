@@ -121,7 +121,7 @@ document.onkeyup = function () {
             guessremainCounter--;
 
             //Update HTML
-            guessremainText.textContent = ("Guesses Remaining " + guessremainCounter);
+            guessremainText.textContent = ("Guesses Remaining: " + guessremainCounter);
 
             // If no guesses left
             if (guessremainCounter === 0) {
