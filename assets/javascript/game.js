@@ -49,7 +49,7 @@ var guessremainCounter = 150;
 
 // Link guessremain counter to HTML
 var guessremainText = document.getElementById("guessesremaining-text")
-guessremainText.textContent = ("Guesses Remaining " + guessremainCounter);
+guessremainText.textContent = ("Guesses Remaining: " + guessremainCounter);
 
 // Establish letters guessed array
 var lettersguessedArray = []
