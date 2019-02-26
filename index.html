@@ -4,63 +4,104 @@
 <head>
     <title>Existential Dread Hangman!</title>
     <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
 
     <!-- Welcome Bar -->
-    <div id="welcome-wrapper">
-        <h1 id="welcome-text">Welcome to Existential Dread Hangman! Does everything feel okay to you right now?!?</h1>
+    <div class="container" id="welcome-wrapper" class="alert alert-info" role="alert">
+        <div class="row">
+            <h2 id="hangman-text">Welcome to...</h2>
+        </div>
+        <div class="row">
+            <h1 id="hangman-text">Existential Dread Hangman!</h1>
+        </div>
+        <div class="row">
+            <h3 id="hangman-text">Do you feel that?</h3>
+        </div>
     </div>
 
-    <!-- Instructions -->
-    <div id="instructions-wrapper">
-        <h2 id="instructions-text">Press any key to begin, why would something go wrong?</h2>
-    </div>
+    <!-- Bottom row has two columns, left column has two sub rows (1. Instructions & 2. Hints) and right has gameplay -->
 
-    <!-- Hints, etc. -->
-    <div id="hints-wrapper">
-        <h3>There's not really anyway to win...just like life...</h3>
-        <h3>Here are some hints since they're definitely on to us:</h3>
-        <ol>
-            <li>
-                The four letter word is the type of will we claim to have.
-            </li>
-            <li>
-                The five letter word is what how I feel about my own mind.
-            </li>
-            <li>
-                The six letter word is an grand illusion which humans create and destroy entire civilizations trying to attain.
-            </li>
-            <li>
-                The seven letter word is what mainstream society calls all this thinking outside the box, thinking about <i>real</i> things!
-            </li>
-        </ol>
-    </div>
+    <!-- Jumbotron holds all the main content -->
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <!-- Everything is in one row -->
+            <div class="row">
 
-    <!-- Blank Slots for Word -->
-    <div id="blankslot-wrapper">
-        <h5 id="blankslot-text"></h5>
-    </div>
+                <!-- Left column has the instructions and hints -->
+                <div class="col-6">
+                    <!-- subcontainer to hold both those things -->
+                    <div class="container">
+                        <!-- Instructions -->
+                        <div class="row" id="instructions-wrapper">
+                            <h4 id="instructions-text">Press any key to begin, why would something go wrong?</h4>
+                        </div>
+                        <!-- Hints -->
+                        <div class="row" id="hints-wrapper">
+                            <h3>Losing is easy, winning is...more a spiritual experience than a tangible one. Kind of
+                                like life...</h3>
+                            <h3>Here are some hints since they're definitely on to us:</h3>
+                            <ol>
+                                <li>
+                                    The four letter word is the type of will we claim to have.
+                                </li>
+                                <li>
+                                    The five letter word is what how I feel about my own mind.
+                                </li>
+                                <li>
+                                    The six letter word is an grand illusion which humans create and destroy entire
+                                    civilizations trying to
+                                    attain.
+                                </li>
+                                <li>
+                                    The seven letter word is what mainstream society calls all this thinking outside the
+                                    box, thinking about
+                                    <i>real</i> things!
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+                <!-- Right column has the game -->
+                <div class="col-6">
+                    <!-- Blank Slots for Word -->
+                    <div id="blankslot-wrapper">
+                        <h5 id="blankslot-text"></h5>
+                    </div>
 
-    <!-- Wins -->
-    <div id="wins-wrapper">
-        <h6 id="wins-text">Wins:</h6>
-    </div>
+                    <!-- Wins -->
+                    <div id="wins-wrapper">
+                        <h6 id="wins-text">Wins:</h6>
+                    </div>
 
-    <!-- Guesses Remaining -->
-    <div id="guessesremaining-wrapper">
-        <h6 id="guessesremaining-text">Guesses Remaining:</h6>
-    </div>
+                    <!-- Guesses Remaining -->
+                    <div id="guessesremaining-wrapper">
+                        <h6 id="guessesremaining-text">Guesses Remaining:</h6>
+                    </div>
 
-    <!-- Letters Guessed -->
-    <div id="lettersguessed-wrapper">
-        <h6 id="lettersguessed">Letters Guessed:</h6>
+                    <!-- Letters Guessed -->
+                    <div id="lettersguessed-wrapper">
+                        <h6 id="lettersguessed">Letters Guessed:</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- Javascript -->
-    <script src="assets/javascript/game2.js"></script>
+    <script src="assets/javascript/game.js"></script>
+
+    <!-- Footer -->
+    <footer class="blockquote-footer">
+        <small class="text-muted">
+            Copyright © AP Incorporated, 2019
+        </small>
+    </footer>
+
 
 </body>
 
