@@ -1,61 +1,57 @@
-
-
-
 /* Background */
-/* body {
-    /* background-image: url("../images/);
+body {
+    /* Setting Background Image */
+    background-image: url("../images/stackofskulls.jpg");
     /* Full height */
-    /* height: 100%; */
+    height: 100%;
     /* Center and scale the image nicely */
-    /* background-position: center;
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-} */
-
-
-/* Some styles for the whole page */
-* {
-    /* color: rgb(230, 230, 230); */
-    font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+    margin-top: 86px;
 }
-h1, h2, h3 {
-    font-family: 'Georgia', Times, Times New Roman, serif;
-    /* color: white; */
+
+
+/* Some styles for the headers */
+h2, h3, h4, h5, h6, li {
+    font-family: monospace;
 }
 
 /* Headers */
 
+#hangman-text {
+    color: rgb(247, 255, 0);
+}
+
 h1 {
+    font-family: fantasy;
     font-weight: bold;
-    font-size: 36px;
+    font-size: 81px;
     padding-left: 10px;
     padding-right: 10px;
     padding-top: 5px;
-    padding-bottom: 5px;
     text-align: center;
 }
 
-h2 {
+h2, h3 {
     font-weight: bold;
-    font-size: 30px;
-}
-
-h3 {
     font-size: 15px;
 }
 
-/* Footers */
-.footer-wrapper {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    margin: 0;
-    left: 0;
+/* Main Section */
+#gameplay-wrapper {
+    padding: 75px;
+    text-align: center;
 }
-#footer-line {
-    background: #63a8a4;
-    padding: 5px;
-    margin: 0;
-    border: #63a8a4;
-    width: 100%;
+
+#blankslot-text {
+    margin-bottom: 30px;
+}
+
+.container {
+    max-width: 1525px;
+}
+
+#tagline-row {
+    margin-top: -15px;
 }

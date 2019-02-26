@@ -31,7 +31,7 @@ var blankWords = [
 var blankslotText = document.getElementById("blankslot-text");
 
 // Establish a guessesremaining counter
-var guessremainCounter = 200;
+var guessremainCounter = 150;
 
 // Link guessremain counter to HTML
 var guessremainText = document.getElementById("guessesremaining-text")
