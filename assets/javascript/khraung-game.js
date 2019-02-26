@@ -132,193 +132,193 @@ for (i = 0; i < possibleAnswer.length; i++) {
 // The below is me doing a (much) longer more written out method
 
 
-//1) Texas
+// //1) Texas
 
-// When a key is hit
-document.onkeyup = function () {
+// // When a key is hit
+// document.onkeyup = function () {
 
-    // Making sure all is lower case
-    userGuess = String.fromCharCode(event.keyCode).toLowerCase();
+//     // Making sure all is lower case
+//     userGuess = String.fromCharCode(event.keyCode).toLowerCase();
 
-    // Shows us what we typed
-    console.log(userGuess);
+//     // Shows us what we typed
+//     console.log(userGuess);
 
-    // If the answer is texas
-    if (computerGuess = possibleAnswer[0]) {
+//     // If the answer is texas
+//     if (computerGuess = possibleAnswer[0]) {
 
 
-        // If the user guess is t
-        if (userGuess == "t") {
+//         // If the user guess is t
+//         if (userGuess == "t") {
 
-            //Replace slot 0 with t
-            blankTexas.splice([0], 1, (userGuess));
+//             //Replace slot 0 with t
+//             blankTexas.splice([0], 1, (userGuess));
 
-            //Establish where in the HTML to replace this
-            letterReveal.textContent = blankTexas;
+//             //Establish where in the HTML to replace this
+//             letterReveal.textContent = blankTexas;
 
-            //Add a good guess counter
-            goodguessCounter++;
+//             //Add a good guess counter
+//             goodguessCounter++;
 
-            //Update HTML
-            goodGuess.textContent = ("Good Guesses: " + goodguessCounter + "");
+//             //Update HTML
+//             goodGuess.textContent = ("Good Guesses: " + goodguessCounter + "");
 
-            //If all letters are guessed
-            if (goodguessCounter == 5) {
+//             //If all letters are guessed
+//             if (goodguessCounter == 5) {
 
-                //Win screen
-                alert("Fuck!");
+//                 //Win screen
+//                 alert("Fuck!");
 
-                // Reset everything
-                location.reload();
-            }
+//                 // Reset everything
+//                 location.reload();
+//             }
 
-            // how us the new blank texas array to check
-            console.log(blankTexas);
+//             // how us the new blank texas array to check
+//             console.log(blankTexas);
 
-            // If the userguess is e
-        } else if (userGuess == "e") {
+//             // If the userguess is e
+//         } else if (userGuess == "e") {
 
-            // Replace slot 1 with e
-            blankTexas.splice([1], 1, (userGuess));
+//             // Replace slot 1 with e
+//             blankTexas.splice([1], 1, (userGuess));
 
-            //Establish where in the HTML to replace this
-            letterReveal.textContent = blankTexas;
+//             //Establish where in the HTML to replace this
+//             letterReveal.textContent = blankTexas;
 
-            //Add a good guess counter
-            goodguessCounter++;
+//             //Add a good guess counter
+//             goodguessCounter++;
 
-            goodGuess.textContent = ("Good Guesses: " + goodguessCounter + "");
+//             goodGuess.textContent = ("Good Guesses: " + goodguessCounter + "");
 
-            //If all letters are guessed
-            if (goodguessCounter == 5) {
+//             //If all letters are guessed
+//             if (goodguessCounter == 5) {
 
-                //Win screen
-                alert("Fuck!");
+//                 //Win screen
+//                 alert("Fuck!");
 
-                // Reset everything
-                location.reload();
-            }
+//                 // Reset everything
+//                 location.reload();
+//             }
 
-            // Show us the new blank texas array to check
-            console.log(blankTexas);
+//             // Show us the new blank texas array to check
+//             console.log(blankTexas);
 
-            // If the usergues is x
-        } else if (userGuess == "x") {
+//             // If the usergues is x
+//         } else if (userGuess == "x") {
 
-            // Replace slot 2 with x
-            blankTexas.splice([2], 1, (userGuess));
+//             // Replace slot 2 with x
+//             blankTexas.splice([2], 1, (userGuess));
 
-            //Establish where in the HTML to replace this
-            letterReveal.textContent = blankTexas;
+//             //Establish where in the HTML to replace this
+//             letterReveal.textContent = blankTexas;
 
-            //Add a good guess counter
-            goodguessCounter++;
+//             //Add a good guess counter
+//             goodguessCounter++;
 
-            goodGuess.textContent = ("Good Guesses: " + goodguessCounter + "");
+//             goodGuess.textContent = ("Good Guesses: " + goodguessCounter + "");
 
-            //If all letters are guessed
-            if (goodguessCounter == 5) {
+//             //If all letters are guessed
+//             if (goodguessCounter == 5) {
                 
-                //Win screen
-                alert("Fuck!");
+//                 //Win screen
+//                 alert("Fuck!");
                 
-                // Reset everything
-                location.reload();
-            }
+//                 // Reset everything
+//                 location.reload();
+//             }
 
-            // Show us the new blank texas array to check
-            console.log(blankTexas);
+//             // Show us the new blank texas array to check
+//             console.log(blankTexas);
 
-            // If the usergues is a
-        } else if (userGuess == "a") {
+//             // If the usergues is a
+//         } else if (userGuess == "a") {
 
-            // Replace slot 3 with a
-            blankTexas.splice([3], 1, (userGuess));
+//             // Replace slot 3 with a
+//             blankTexas.splice([3], 1, (userGuess));
 
-            //Establish where in the HTML to replace this
-            letterReveal.textContent = blankTexas;
+//             //Establish where in the HTML to replace this
+//             letterReveal.textContent = blankTexas;
 
-            //Add a good guess counter
-            goodguessCounter++;
+//             //Add a good guess counter
+//             goodguessCounter++;
 
-            goodGuess.textContent = ("Good Guesses: " + goodguessCounter + "");
+//             goodGuess.textContent = ("Good Guesses: " + goodguessCounter + "");
 
-            //If all letters are guessed
-            if (goodguessCounter == 5) {
+//             //If all letters are guessed
+//             if (goodguessCounter == 5) {
                 
-                //Win screen
-                alert("Fuck!");
+//                 //Win screen
+//                 alert("Fuck!");
                 
-                // Reset everything
-                location.reload();
-            }
+//                 // Reset everything
+//                 location.reload();
+//             }
 
-            // Show us the new blank texas array to check
-            console.log(blankTexas);
+//             // Show us the new blank texas array to check
+//             console.log(blankTexas);
 
-            // If it's none of those letters
+//             // If it's none of those letters
 
-            // If the usergues is s
-        } else if (userGuess == "s") {
+//             // If the usergues is s
+//         } else if (userGuess == "s") {
 
-            // Replace slot 4 with s
-            blankTexas.splice([4], 1, (userGuess));
+//             // Replace slot 4 with s
+//             blankTexas.splice([4], 1, (userGuess));
 
-            //Establish where in the HTML to replace this
-            letterReveal.textContent = blankTexas;
+//             //Establish where in the HTML to replace this
+//             letterReveal.textContent = blankTexas;
 
-            //Add a good guess counter
-            goodguessCounter++;
+//             //Add a good guess counter
+//             goodguessCounter++;
 
-            goodGuess.textContent = ("Good Guesses: " + goodguessCounter + "");
+//             goodGuess.textContent = ("Good Guesses: " + goodguessCounter + "");
 
-            //If all letters are guessed
-            if (goodguessCounter == 5) {
+//             //If all letters are guessed
+//             if (goodguessCounter == 5) {
                 
-                //Win screen
-                alert("Fuck!");
+//                 //Win screen
+//                 alert("Fuck!");
                 
-                // Reset everything
-                location.reload();
-            }
+//                 // Reset everything
+//                 location.reload();
+//             }
 
-            // Show us the new blank texas array to check
-            console.log(blankTexas);
+//             // Show us the new blank texas array to check
+//             console.log(blankTexas);
 
-            // Finally if it's the wrong letter
-        } else {
+//             // Finally if it's the wrong letter
+//         } else {
 
-            // Just to make sure we know
-            console.log("lose");
+//             // Just to make sure we know
+//             console.log("lose");
 
-            // Attempt at getting unsuccessfull letter pushed to array 
+//             // Attempt at getting unsuccessfull letter pushed to array 
             
-            // letterGuessed.push(userGuess);
+//             // letterGuessed.push(userGuess);
 
-            // unlikelySuspects.textContent = ("" + userGuess);
+//             // unlikelySuspects.textContent = ("" + userGuess);
 
-            // Lose a guess
-            guessCounter--;
+//             // Lose a guess
+//             guessCounter--;
             
 
-            // Update guess counter
-            guessesLeft.textContent = ("You've got " + guessCounter + " more tries!");
+//             // Update guess counter
+//             guessesLeft.textContent = ("You've got " + guessCounter + " more tries!");
 
-            //need to push to unlikely suspects array
+//             //need to push to unlikely suspects array
 
-            // If you have no guesses left
-            if (guessCounter === 0) {
+//             // If you have no guesses left
+//             if (guessCounter === 0) {
 
-                // Lose screen!
-                alert("You lost! But no worries, you must lose to know what it is to win!");
+//                 // Lose screen!
+//                 alert("You lost! But no worries, you must lose to know what it is to win!");
 
-                // Reset everything
-                location.reload();
-            }
+//                 // Reset everything
+//                 location.reload();
+//             }
 
-        }
-    }
-}
+//         }
+//     }
+// }
 
 
 
@@ -328,51 +328,50 @@ document.onkeyup = function () {
 
 
 
-// // Console log to check computer guess
-// console.log(computerGuess);
+// Console log to check computer guess
+console.log(computerGuess);
 
 
-// // Onkeyup capture
-// document.onkeyup = function () {
+// Onkeyup capture
+document.onkeyup = function () {
 
-//     // Lowercase
-//     userGuess = String.fromCharCode(event.keyCode).toLowerCase();
+    // Lowercase
+    userGuess = String.fromCharCode(event.keyCode).toLowerCase();
 
-//     // Check capture
-//     console.log(userGuess);
-//     // Make blank guess line up appropriately
+    // Check capture
+    console.log(userGuess);
+    // Make blank guess line up appropriately
 
-//     // For every possible answer
-//     for (i = 0; i < possibleAnswer.length; i++) {
+    // For every possible answer
+    for (i = 0; i < possibleAnswer.length; i++) {
 
-//         // If the computer guess is whatever answer in the array
-//         if (computerGuess == possibleAnswer[i]) {
+        // If the computer guess is whatever answer in the array
+        if (computerGuess == possibleAnswer[i]) {
 
-//             // For every letter in the computer's guess
-//             for (j = 0; j < computerGuess.length; j++) {
+            // For every letter in the computer's guess
+            for (j = 0; j < computerGuess.length; j++) {
 
-//                 // If the user's guess is equal to that letter
-//                 if (userGuess == computerGuess[j]) {
+                // If the user's guess is equal to that letter
+                if (userGuess == computerGuess[j]) {
 
-//                     // Splice the userguess one character at the index of the computerguess onto the blankoption selected
-//                     blankOptions[i].splice(j, 1, userGuess);
+                    // Splice the userguess one character at the index of the computerguess onto the blankoption selected
+                    blankOptions[i].splice(j, 1, userGuess);
 
-//                     // Console log to check
-//                     letterReveal.textContent = blankOptions[i];
-//                 } 
+                    // Console log to check
+                    letterReveal.textContent = blankOptions[i];
+                } 
 
-//                 // This is where I'm tripped up, cant get it to break without breaking the whole loop, but at the same time this break if left alone will deplate all the guesses.
-//                 else {
-//                     console.log("lose");
-//                     return;
-//                 }
-//             }
+                // This is where I'm tripped up, cant get it to break without breaking the whole loop, but at the same time this break if left alone will deplate all the guesses.
+                else {
+                    console.log("lose");
+                }
+            }
 
-//             //check if it worked?
-//             console.log(blankOptions[i]);
-//         }
+            //check if it worked?
+            console.log(blankOptions[i]);
+        }
 
 
-//     }
+    }
 
-// }
+}
