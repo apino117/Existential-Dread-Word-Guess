@@ -11,18 +11,7 @@ body {
     margin-top: 86px;
 }
 
-
-/* Some styles for the headers */
-h2, h3, h4, h5, h6, li {
-    font-family: monospace;
-}
-
-/* Headers */
-
-#hangman-text {
-    color: rgb(247, 255, 0);
-}
-
+/* Header Attributes */
 h1 {
     font-family: fantasy;
     font-weight: bold;
@@ -38,7 +27,18 @@ h2, h3 {
     font-size: 15px;
 }
 
+/* Text content in the headers */
+#hangman-text {
+    color: rgb(247, 255, 0);
+}
+
+/* Some styles for the headers */
+h2, h3, h4, h5, h6, li {
+    font-family: monospace;
+}
+
 /* Main Section */
+
 #gameplay-wrapper {
     padding: 75px;
     text-align: center;
