@@ -1,7 +1,9 @@
 // Jquery didnt even work for the audio, why cant audio work?!?!?
 // var bgMusic = document.createElement("audio");
-// bgMusic.setAttribute("src", "assets/Dread-Man Background Music.mp3");
+// bgMusic.setAttribute("src", "assets/Dread-Guess-Background-Music.mp3");
 // $(document).ready(function () {
+//     document.querySelector("#audio-wrapper").append(bgMusic);
+//     console.log(bgMusic);
 //     bgMusic.play();
 // });
 
@@ -45,7 +47,7 @@ var blankWords = [
 var blankslotText = document.getElementById("blankslot-text");
 
 // Establish a guessesremaining counter
-var guessremainCounter = 150;
+var guessremainCounter = 15;
 
 // Link guessremain counter to HTML
 var guessremainText = document.getElementById("guessesremaining-text")
@@ -88,6 +90,8 @@ blankslotText.textContent = blankGuess
 // When a key is hit
 document.onkeyup = function () {
 
+    var isGuessed = false;
+
     // Making sure all is lower case
     userGuess = String.fromCharCode(event.keyCode).toLowerCase();
 
@@ -114,26 +118,33 @@ document.onkeyup = function () {
             // 4. Update HTML
             blankslotText.textContent = blankGuess;
 
-            // If letter is not correct
-        } else {
+            isGuessed = true;
 
-            // Lose a guess
-            guessremainCounter--;
+        } 
+    }
+    if (!isGuessed) {
 
-            //Update HTML
-            guessremainText.textContent = ("Guesses Remaining: " + guessremainCounter);
+        // Lose a guess
+        guessremainCounter--;
 
-            // If no guesses left
-            if (guessremainCounter === 0) {
+        //Update HTML
+        guessremainText.textContent = ("Guesses Remaining: " + guessremainCounter);
 
-                //Lose screen
-                alert("Ah...you've lost...that's probably okay...");
+        // If no guesses left
+        if (guessremainCounter === 0) {
 
-                // Reset everything
-                location.reload();
-            }
+            //Lose screen
+            alert("Ah...you've lost...that's probably okay...");
 
+            // Reset everything
+            location.reload();
         }
+    }
+    // If the blankguess doesnt have anymore "_" in it
+    if (!blankGuess.includes("_")) {
+        
+        // Win condition
+        alert("win");
     }
 }
 
