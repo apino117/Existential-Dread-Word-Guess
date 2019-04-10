@@ -11,5 +11,7 @@ Dread-guess' goal is to just be totally fine and everything's going to be okay. 
 To get started, open it up and dont worry about what will happen afterwards! Just get started, that's the important thing!
 
 If at any point you need help please rest assured by the time help arrives it won't matter. You've already fulfilled your purpose. They're coming now.
+
+https://apino117.github.io/Existential-Dread-Word-Guess/
         
 ![OhmygodRobot](assets/images/ohmygod.gif)      
